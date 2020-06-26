@@ -5,7 +5,7 @@ int turn;
 int flag[2];
 
 void proceso_0() {
-	
+	printf("Entrada del proceso: 0\n");
 	flag[0] = 1;                      
       	turn = 1;                            
       	while( flag[1] && turn == 1 ){
@@ -23,10 +23,11 @@ void proceso_0() {
 	printf("Termina seccion crítica del proceso: 0\n");
 	flag[0] = 0;
 	printf("Sección NO crítica proceso: 0\n");
+	printf("------Salida del proceso: 0----\n");
 }
 
 void proceso_1() {
-
+	printf("Entrada del proceso: 1\n");
 	flag[1] = 1;
       	turn = 0;
       	while( flag[0] && turn == 0 ){
@@ -38,6 +39,7 @@ void proceso_1() {
 	printf("Termina seccion crítica del proceso: 1\n");
 	flag[1] = 0;
 	printf("Sección NO crítica proceso: 1\n");
+	printf("-------Salida del proceso: 1----\n");
 
 	
 }
